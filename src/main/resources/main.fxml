@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="852.0" prefWidth="1353.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senac.trabalho.java.fx.controller.CadastroController">
+  <tabs>
+    <Tab fx:id="btnSalvarCliente" text="Cliente">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane layoutX="16.0" layoutY="14.0" prefHeight="100.0" prefWidth="1300.0" AnchorPane.bottomAnchor="696.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="14.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Documento" />
+                        <Label layoutX="315.0" layoutY="12.0" text="Nome" />
+                        <Label layoutX="839.0" layoutY="12.0" text="RG" />
+                        <TextField fx:id="documento" layoutX="14.0" layoutY="39.0" prefHeight="31.0" prefWidth="263.0" />
+                        <TextField fx:id="nome" layoutX="315.0" layoutY="36.0" prefHeight="31.0" prefWidth="448.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="16.0" layoutY="107.0" prefHeight="100.0" prefWidth="1300.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="14.0" text="Email" />
+                        <TextField fx:id="email" layoutX="310.0" layoutY="39.0" prefHeight="31.0" prefWidth="450.0" />
+                        <TextField fx:id="rg" layoutX="838.0" layoutY="-57.0" />
+                        <TextField fx:id="telefone" layoutX="14.0" layoutY="39.0" />
+                        <Label layoutX="309.0" layoutY="14.0" text="Telefone" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="16.0" layoutY="207.0" prefHeight="100.0" prefWidth="1300.0">
+                     <children>
+                        <Button fx:id="btnSalvarCliente" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#executarSalvar" text="Salvar" />
+                        <Button fx:id="btnExcluirCliente" layoutX="127.0" layoutY="35.0" mnemonicParsing="false" onAction="#executarExcluir" text="Excluir" />
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="tabelaClientes" layoutX="16.0" layoutY="307.0" prefHeight="492.0" prefWidth="1300.0">
+                    <columns>
+                        <TableColumn fx:id="colunaCodCli" prefWidth="132.0" text="CodCli" />
+                      <TableColumn fx:id="colunaDocumento" prefWidth="168.0" text="Documento" />
+                      <TableColumn fx:id="colunaNome" prefWidth="350.0" text="Nome" />
+                        <TableColumn fx:id="colunaRg" prefWidth="150.0" text="RG" />
+                        <TableColumn fx:id="colunaEmail" prefWidth="300.0" text="Email" />
+                        <TableColumn fx:id="colunaTelefone" minWidth="0.0" prefWidth="199.0" text="Telefone" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Endereço">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1242.0">
+               <children>
+                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="77.0" prefWidth="1230.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="14.0" text="ID End" />
+                        <Label layoutX="295.0" layoutY="14.0" prefHeight="21.0" prefWidth="130.0" text="Codigo Cliente" />
+                        <Label layoutX="547.0" layoutY="14.0" prefHeight="21.0" prefWidth="44.0" text="Cep" />
+                        <TextField fx:id="Cep" layoutX="549.0" layoutY="39.0" />
+                        <TextField fx:id="codigoCiente" layoutX="296.0" layoutY="39.0" prefHeight="31.0" prefWidth="146.0" />
+                        <TextField fx:id="IdEnd" layoutX="12.0" layoutY="39.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="14.0" layoutY="88.0" prefHeight="81.0" prefWidth="1228.0">
+                     <children>
+                        <Label layoutX="9.0" layoutY="14.0" prefHeight="21.0" prefWidth="130.0" text="Rua" />
+                        <Label layoutX="548.0" layoutY="14.0" prefHeight="21.0" prefWidth="130.0" text="Numero" />
+                        <Label layoutX="734.0" layoutY="14.0" prefHeight="21.0" prefWidth="130.0" text="Bairro" />
+                        <TextField fx:id="rua" layoutX="10.0" layoutY="39.0" prefHeight="31.0" prefWidth="430.0" />
+                        <TextField fx:id="numero" layoutX="548.0" layoutY="39.0" prefHeight="31.0" prefWidth="104.0" />
+                        <TextField fx:id="bairro" layoutX="735.0" layoutY="39.0" prefHeight="31.0" prefWidth="342.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="14.0" layoutY="165.0" prefHeight="76.0" prefWidth="1231.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="14.0" prefHeight="21.0" prefWidth="130.0" text="Cidade" />
+                        <Label layoutX="547.0" layoutY="14.0" prefHeight="21.0" prefWidth="130.0" text="Estado" />
+                        <TextField fx:id="cidade" layoutX="10.0" layoutY="39.0" prefHeight="31.0" prefWidth="430.0" />
+                        <TextField fx:id="estado" layoutX="548.0" layoutY="39.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="14.0" layoutY="237.0" prefHeight="95.0" prefWidth="1231.0">
+                     <children>
+                        <Button fx:id="btnSalvarEndereco" layoutX="10.0" layoutY="29.0" mnemonicParsing="false" onAction="#executarSalvar" text="Salvar" />
+                        <Button fx:id="btnExcluirEndereco" layoutX="127.0" layoutY="29.0" mnemonicParsing="false" onAction="#executarExcluir" text="Excluir" />
+                     </children>
+                  </AnchorPane>
+                  <TableView fx:id="tabelaEnderecos" layoutX="23.0" layoutY="326.0" prefHeight="456.0" prefWidth="1284.0">
+                    <columns>
+                      <TableColumn fx:id="colunaIdEnd" prefWidth="75.0" text="ID END" />
+                      <TableColumn fx:id="colunaCodigoCliente" prefWidth="132.0" text="Codigo Cliente" />
+                        <TableColumn fx:id="colunaCep" prefWidth="137.0" text="Cep" />
+                        <TableColumn fx:id="colunaRua" prefWidth="259.0" text="Rua" />
+                        <TableColumn fx:id="colunaBairro" prefWidth="303.0" text="Bairro" />
+                        <TableColumn fx:id="colunaNumero" prefWidth="126.0" text="Numero" />
+                        <TableColumn fx:id="colunaCidade" prefWidth="166.0" text="Cidade" />
+                        <TableColumn fx:id="colunaEstado" prefWidth="106.0" text="Estado" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
